@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/felix/ontologies/2024/9/untitled-ontology-6/"
+     xml:base="http://www.semanticweb.org/felix/ontologies/2024/9/untitled-ontology-6/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/FAIR-course-UT/2024-2025/6/ont#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#hasLocation">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q2140665"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Property:P625"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/FAIR-course-UT/2024-2025/6/ont#hasPlug -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#hasPlug">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q2140665"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q66024958"/>
+        <rdfs:comment>hasPlug</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailable -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailable">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q66024958"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q1023606"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q1123613"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q18411196"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Q2335519"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailableCCS -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailableCCS">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailableCHAdeMO -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailableCHAdeMO">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailableSchuko -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailableSchuko">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailableType2 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailableType2">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#isAvailable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Property:P127 -->
+
+    <owl:ObjectProperty rdf:about="https://www.wikidata.org/wiki/Property:P127">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q2140665"/>
+        <rdfs:range rdf:resource="https://www.wikidata.org/wiki/Property:P137"/>
+        <rdfs:label>ownedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/FAIR-course-UT/2024-2025/6/ont#numberOfChargers -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/FAIR-course-UT/2024-2025/6/ont#numberOfChargers"/>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q3320608 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.wikidata.org/wiki/Q3320608">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q2140665"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Nominal Power per Charger [kW]</rdfs:comment>
+        <rdfs:label>nominalPowerInKW</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q34027 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.wikidata.org/wiki/Q34027">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Property:P625"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q36477 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.wikidata.org/wiki/Q36477">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Property:P625"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Property:P729 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.wikidata.org/wiki/Property:P729">
+        <rdfs:domain rdf:resource="https://www.wikidata.org/wiki/Q2140665"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>serviceEntry (commisioning date of the charging station)</rdfs:comment>
+        <rdfs:label>serviceEntry</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q1023606 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q1023606">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q66024958"/>
+        <rdfs:label>CHAdeMO Connector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q1123613 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q1123613">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q66024958"/>
+        <rdfs:label>Schuko Connector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q18411196 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q18411196">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q66024958"/>
+        <rdfs:label>CCS Connector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q2140665 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q2140665">
+        <rdfs:label>ChargingStation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q2335519 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q2335519">
+        <rdfs:subClassOf rdf:resource="https://www.wikidata.org/wiki/Q66024958"/>
+        <rdfs:label>Type 2 Connector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q66024958 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Q66024958">
+        <rdfs:label>ElectricConnector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Property:P137 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Property:P137">
+        <rdfs:comment>reconciled as Enterprise</rdfs:comment>
+        <rdfs:label>operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Property:P625 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/wiki/Property:P625">
+        <rdfs:comment>Coordinate Location of the Charging Station (lat long)</rdfs:comment>
+        <rdfs:label>CoordinateLocation</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
