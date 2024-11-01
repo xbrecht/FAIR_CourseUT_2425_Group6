@@ -1,0 +1,109 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix fjb: <https://w3id.org/FAIR-course-UT/2024-2025/6/ont#> .
+@prefix ex: <https://w3id.org/FAIR-course-UT/2024-2025/6/shapes#> .
+
+# SHACL Shape for ChargingStations
+ex:ChargingStationShape a sh:NodeShape ;
+    sh:targetClass fjb:ChargingStation ;
+
+    # ownedBy valid IRI for one operator
+    sh:property [
+        sh:path fjb:ownedBy ;
+        sh:description "The URI that identifies the owner (operator) of the charging station. Can be more than one." ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+    ] ;
+
+    # serviceEntry as one date
+    sh:property [
+        sh:path fjb:serviceEntry ;
+        sh:description "The service entry date of the charging station." ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # numberOfChargers is one integer
+    sh:property [
+        sh:path fjb:numberOfChargers ;
+        sh:description "The number of charging points available at the station. This describes the connection power towards the grid operator. This defines, how many vehicles can charge at the same time." ;
+        sh:datatype xsd:int ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # nominalPowerInKW is one double
+    sh:property [
+        sh:path fjb:nominalPowerInKW ;
+        sh:description "The nominal power rating of the charging station in kW. If fully occupied, the available power per Charging Point equals nominalPowerInKW divided by numberOfChargers." ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # lat is one double
+    sh:property [
+        sh:path geo:lat ;
+        sh:description "The latitude of the charging station´s location." ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # long is one double
+    sh:property [
+        sh:path geo:long ;
+        sh:description "The longitude of the charging station´s location." ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # hasConnector is defined as an IRI
+    sh:property [
+        sh:path fjb:hasConnector ;
+        sh:description "The different connectors as a node that are available at the charging station." ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+### SHACL Shape for ElectricConnector
+ex:ElectricConnectorShape a sh:NodeShape ;
+    sh:targetClass fjb:ElectricConnector ;
+
+    # every connection availability must be defined and a boolean
+    sh:property [
+        sh:path fjb:isAvailableType2 ;
+        sh:description "Indicates, if Type 2 connector is available." ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path fjb:isAvailableCCS ;
+        sh:description "Indicates, if CCS connector is available." ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path fjb:isAvailableSchuko ;
+        sh:description "Indicates, if Schuko connector is available." ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path fjb:isAvailableCHAdeMO ;
+        sh:description "Indicates, if CHAdeMO connector is available." ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
