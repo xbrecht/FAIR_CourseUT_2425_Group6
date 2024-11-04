@@ -12,3 +12,11 @@ An Onthology has been created to allow for the definition of a data graph.
 The SHACL is validated via 
 https://shacl.org/playground/
 to the data graph as a Turtle format.
+
+
+Notes:
+Target Class:   Charging Station
+Title:          En_FairChargingGermany
+Version:        1.0
+Publisher:      F.J.Brechtken, O.E.Solak from Bundesnetzagentur
+License:        Openlicense according to Datennutzungsgesetz P10 since July 2021
