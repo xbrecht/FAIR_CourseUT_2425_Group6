@@ -1,0 +1,91 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix fjb: <https://w3id.org/FAIR-course-UT/2024-2025/6/ont#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://w3id.org/FAIR-course-UT/2024-2025/6/shapes#> .
+
+# -1- Metadata Charging Station #
+
+ex:ChargingStationShape a sh:NodeShape ;
+    sh:targetClass fjb:ChargingStation ;
+    
+    # Validate the Operator Name (Must be present)
+    sh:property [
+        sh:path fjb:operator ;
+        sh:description "The name of the operator of the charging station" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate Latitude (Must be present and a double value)
+    sh:property [
+        sh:path geo:lat ;
+        sh:description "The latitude of the charging station." ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate Longitude (Must be present and a double value)
+    sh:property [
+        sh:path geo:long ;
+        sh:description "The longitude of the charging station." ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate Service Entry Date (Must be present and a date)
+    sh:property [
+        sh:path fjb:serviceEntryDate ;
+        sh:description "The date the charging station started service." ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate Number of Chargers (Must be present and an integer)
+    sh:property [
+        sh:path fjb:numberOfChargers ;
+        sh:description "The number of charging points available at the station." ;
+        sh:datatype xsd:int ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate Nominal Power in kW (Must be present and a double)
+    sh:property [
+        sh:path fjb:nominalPowerInKW ;
+        sh:description "The nominal power rating of the charging station in kW." ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate Type 2 Availability (Must be a boolean)
+    sh:property [
+        sh:path fjb:isAvailableType2 ;
+        sh:description "Indicates if Type 2 connector is available." ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate CCS Availability (Must be a boolean)
+    sh:property [
+        sh:path fjb:isAvailableCCS ;
+        sh:description "Indicates if CCS connector is available." ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate Schuko Availability (Must be a boolean)
+    sh:property [
+        sh:path fjb:isAvailableSchuko ;
+        sh:description "Indicates if Schuko connector is available." ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Validate CHAdeMO Availability (Must be a boolean)
+    sh:property [
+        sh:path fjb:isAvailableCHAdeMO ;
+        sh:description "Indicates if CHAdeMO connector is available." ;
+        sh:datatype xsd:boolean ;
+        sh:minCount 1 ;
+    ] .
